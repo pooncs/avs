@@ -1,0 +1,12 @@
+if(WITH_CATCH2)
+  add_executable(avs_tests_catch2 test_graph_catch2.cpp test_nodes_catch2.cpp)
+  target_link_libraries(avs_tests_catch2 PRIVATE avs_nodes avs_graph avs_core Catch2::Catch2WithMain)
+  add_test(NAME avs_catch2 COMMAND avs_tests_catch2)
+endif()
+
+if(WITH_GTEST)
+  add_executable(avs_tests_gtest test_graph_gtest.cpp test_nodes_gtest.cpp)
+  target_link_libraries(avs_tests_gtest PRIVATE avs_nodes avs_graph avs_core GTest::gtest_main)
+  include(GoogleTest)
+  gtest_discover_tests(avs_tests_gtest)
+endif()

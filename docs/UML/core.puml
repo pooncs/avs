@@ -1,0 +1,21 @@
+@startuml
+' AutoVisionStudio UML - PlantUML
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam linetype ortho
+skinparam dpi 150
+
+package "avs::core" {
+  class Logger {
+    {static} + log_info(s: string)
+    {static} + log_warn(s: string)
+    {static} + log_err(s: string)
+  }
+  class Image {+w: int;+h: int;+c: int;+data: vector<unsigned char>}
+  class Point3f {+x: float;+y: float;+z: float}
+  class PointCloud {+pts: vector<Point3f>}
+  class Pose {+T: float[16]}
+  class Result {+ok: bool;+msg: string}
+}
+
+@enduml

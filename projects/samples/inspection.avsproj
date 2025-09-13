@@ -1,0 +1,7 @@
+{
+  "kind": "project",
+  "template": "inspection",
+  "params": {
+    "report": "csv"
+  }
+}

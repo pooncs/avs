@@ -1,0 +1,818 @@
+
+C:\Users\hmgics\projects\AutoVisionStudio>conan install . -s compiler.cppstd=17 --output-folder=build --build=missing --settings=build_type=Release
+
+======== Input profiles ========
+Profile host:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=msvc
+compiler.cppstd=17
+compiler.runtime=dynamic
+compiler.runtime_type=Release
+compiler.version=192
+os=Windows
+
+Profile build:
+[settings]
+arch=x86_64
+build_type=Release
+compiler=msvc
+compiler.cppstd=14
+compiler.runtime=dynamic
+compiler.runtime_type=Release
+compiler.version=192
+os=Windows
+
+
+======== Computing dependency graph ========
+Graph root
+    conanfile.txt: C:\Users\hmgics\projects\AutoVisionStudio\conanfile.txt
+
+======== Computing necessary packages ========
+
+======== Installing packages ========
+
+======== Finalizing install (deploy, generators) ========
+conanfile.txt: Writing generators to C:\Users\hmgics\projects\AutoVisionStudio\build
+conanfile.txt: Generator 'CMakeDeps' calling 'generate()'
+conanfile.txt: Generator 'CMakeToolchain' calling 'generate()'
+conanfile.txt: CMakeToolchain generated: conan_toolchain.cmake
+conanfile.txt: CMakeToolchain: Preset 'conan-default' added to CMakePresets.json.
+    (cmake>=3.23) cmake --preset conan-default
+    (cmake<3.23) cmake <path> -G "Visual Studio 16 2019" -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake  -DCMAKE_POLICY_DEFAULT_CMP0091=NEW
+conanfile.txt: CMakeToolchain generated: C:\Users\hmgics\projects\AutoVisionStudio\build\CMakePresets.json
+conanfile.txt: CMakeToolchain generated: C:\Users\hmgics\projects\AutoVisionStudio\CMakeUserPresets.json
+conanfile.txt: Generating aggregated env files
+conanfile.txt: Generated aggregated env files: ['conanbuild.bat', 'conanrun.bat']
+Install finished successfully
+
+C:\Users\hmgics\projects\AutoVisionStudio>cmake --preset conan-default 
+-- Using Conan toolchain: C:/Users/hmgics/projects/AutoVisionStudio/build/conan_toolchain.cmake
+-- Conan toolchain: CMAKE_GENERATOR_TOOLSET=v142
+-- Conan toolchain: Setting CMAKE_MSVC_RUNTIME_LIBRARY=$<$<CONFIG:Release>:MultiThreadedDLL>
+-- Conan toolchain: C++ Standard 17 with extensions OFF
+-- Selecting Windows SDK version 10.0.19041.0 to target Windows 10.0.19045.
+-- OpenCV ARCH: x64
+-- OpenCV RUNTIME: vc16
+-- OpenCV STATIC: OFF
+-- Found OpenCV: C:/Users/hmgics/projects/AutoVisionStudio/3rdParty/opencv (found version "4.12.0") found components: core imgproc
+-- Found OpenCV 4.12.0 in C:/Users/hmgics/projects/AutoVisionStudio/3rdParty/opencv/x64/vc16/lib
+-- You might need to add C:\Users\hmgics\projects\AutoVisionStudio\3rdParty\opencv\x64\vc16\bin to your PATH to be able to run your applications.
+-- OpenCV ARCH: x64
+-- OpenCV RUNTIME: vc16
+-- OpenCV STATIC: OFF
+-- Found OpenCV: C:/Users/hmgics/projects/AutoVisionStudio/3rdParty/opencv (found version "4.12.0") found components: core imgproc highgui
+-- Found OpenCV 4.12.0 in C:/Users/hmgics/projects/AutoVisionStudio/3rdParty/opencv/x64/vc16/lib
+-- You might need to add C:\Users\hmgics\projects\AutoVisionStudio\3rdParty\opencv\x64\vc16\bin to your PATH to be able to run your applications.
+-- Configuring done (5.1s)
+-- Generating done (8.4s)
+-- Build files have been written to: C:/Users/hmgics/projects/AutoVisionStudio/build
+
+C:\Users\hmgics\projects\AutoVisionStudio>cmake --build build --config Release 
+Microsoft (R) Build Engine version 16.11.6+a918ceb31 for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  1>Checking Build System
+  Building Custom Rule C:/Users/hmgics/projects/AutoVisionStudio/build/_deps/catch2-src/src/CMakeLists.txt
+  catch_chronometer.cpp
+  catch_analyse.cpp
+  catch_benchmark_function.cpp
+  catch_run_for_at_least.cpp
+  catch_stats.cpp
+  catch_generator_exception.cpp
+  catch_generators.cpp
+  catch_generators_random.cpp
+  catch_reporter_automake.cpp
+  catch_reporter_common_base.cpp
+  catch_reporter_compact.cpp
+  catch_reporter_console.cpp
+  catch_reporter_cumulative_base.cpp
+  catch_reporter_event_listener.cpp
+  catch_reporter_helpers.cpp
+  catch_reporter_json.cpp
+  catch_reporter_junit.cpp
+  catch_reporter_multi.cpp
+  catch_reporter_registrars.cpp
+  catch_reporter_sonarqube.cpp
+  catch_reporter_streaming_base.cpp
+  catch_reporter_tap.cpp
+  catch_reporter_teamcity.cpp
+  catch_reporter_xml.cpp
+  catch_interfaces_capture.cpp
+  catch_interfaces_config.cpp
+  catch_interfaces_exception.cpp
+  catch_interfaces_generatortracker.cpp
+  catch_interfaces_registry_hub.cpp
+  catch_interfaces_reporter.cpp
+  catch_interfaces_reporter_factory.cpp
+  catch_interfaces_testcase.cpp
+  catch_approx.cpp
+  catch_assertion_result.cpp
+  catch_config.cpp
+  catch_get_random_seed.cpp
+  catch_message.cpp
+  catch_registry_hub.cpp
+  catch_session.cpp
+  catch_tag_alias_autoregistrar.cpp
+  catch_test_case_info.cpp
+  catch_test_spec.cpp
+  catch_timer.cpp
+  catch_tostring.cpp
+  catch_totals.cpp
+  catch_translate_exception.cpp
+  catch_version.cpp
+  catch_assertion_handler.cpp
+  catch_case_insensitive_comparisons.cpp
+  catch_clara.cpp
+  catch_commandline.cpp
+  catch_console_colour.cpp
+  catch_context.cpp
+  catch_debug_console.cpp
+  catch_debugger.cpp
+  catch_decomposer.cpp
+  catch_enforce.cpp
+  catch_enum_values_registry.cpp
+  catch_errno_guard.cpp
+  catch_exception_translator_registry.cpp
+  catch_fatal_condition_handler.cpp
+  catch_floating_point_helpers.cpp
+  catch_getenv.cpp
+  catch_istream.cpp
+  catch_jsonwriter.cpp
+  catch_lazy_expr.cpp
+  catch_leak_detector.cpp
+  catch_list.cpp
+  catch_message_info.cpp
+  catch_output_redirect.cpp
+  catch_parse_numbers.cpp
+  catch_polyfills.cpp
+  catch_random_number_generator.cpp
+  catch_random_seed_generation.cpp
+  catch_reporter_registry.cpp
+  catch_reporter_spec_parser.cpp
+  catch_result_type.cpp
+  catch_reusable_string_stream.cpp
+  catch_run_context.cpp
+  catch_section.cpp
+  catch_singletons.cpp
+  catch_source_line_info.cpp
+  catch_startup_exception_registry.cpp
+  catch_stdstreams.cpp
+  catch_string_manip.cpp
+  catch_stringref.cpp
+  catch_tag_alias_registry.cpp
+  catch_test_case_info_hasher.cpp
+  catch_test_case_registry_impl.cpp
+  catch_test_case_tracker.cpp
+  catch_test_failure_exception.cpp
+  catch_test_registry.cpp
+  catch_test_spec_parser.cpp
+  catch_textflow.cpp
+  catch_uncaught_exceptions.cpp
+  catch_wildcard_pattern.cpp
+  catch_xmlwriter.cpp
+  catch_matchers.cpp
+  catch_matchers_container_properties.cpp
+  catch_matchers_exception.cpp
+  catch_matchers_floating_point.cpp
+  catch_matchers_predicate.cpp
+  catch_matchers_quantifiers.cpp
+  catch_matchers_string.cpp
+  catch_matchers_templated.cpp
+  catch_matchers_impl.cpp
+  Catch2.vcxproj -> C:\Users\hmgics\projects\AutoVisionStudio\build\_deps\catch2-build\src\Release\Catch2.lib
+  Building Custom Rule C:/Users/hmgics/projects/AutoVisionStudio/build/_deps/catch2-src/src/CMakeLists.txt
+  catch_main.cpp
+  Catch2WithMain.vcxproj -> C:\Users\hmgics\projects\AutoVisionStudio\build\_deps\catch2-build\src\Release\Catch2Main.lib
+  Building Custom Rule C:/Users/hmgics/projects/AutoVisionStudio/src/adapters/opencv/CMakeLists.txt
+  OpenCVAdapter.cpp
+  avs_adapters_opencv.vcxproj -> C:\Users\hmgics\projects\AutoVisionStudio\build\src\adapters\opencv\Release\avs_adapters_op
+  encv.lib
+  Building Custom Rule C:/Users/hmgics/projects/AutoVisionStudio/src/core/CMakeLists.txt
+  logging.cpp
+  telemetry.cpp
+  avs_core.vcxproj -> C:\Users\hmgics\projects\AutoVisionStudio\build\src\core\Release\avs_core.lib
+  Building Custom Rule C:/Users/hmgics/projects/AutoVisionStudio/src/graph/CMakeLists.txt
+  graph.cpp
+  executor.cpp
+  registry.cpp
+  serialization.cpp
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/node.hpp(32,20): error C3646: 'process': unknown overr
+ide specifier (compiling source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\graph.cpp) [C:\Users\hmgics\pro
+jects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/node.hpp(32,28): error C2059: syntax error: ')' (compi 
+ling source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\graph.cpp) [C:\Users\hmgics\projects\AutoVisionStud 
+io\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/node.hpp(32,33): error C2238: unexpected token(s) prec 
+eding ';' (compiling source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\graph.cpp) [C:\Users\hmgics\project 
+s\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/graph.hpp(24,12): error C3646: 'runOnce': unknown over 
+ride specifier (compiling source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\graph.cpp) [C:\Users\hmgics\pr 
+ojects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/graph.hpp(24,19): error C2059: syntax error: '(' (comp 
+iling source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\graph.cpp) [C:\Users\hmgics\projects\AutoVisionStu 
+dio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/graph.hpp(24,21): error C2238: unexpected token(s) pre 
+ceding ';' (compiling source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\graph.cpp) [C:\Users\hmgics\projec 
+ts\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\core\include\avs/core/log.hpp(11,73): error C2001: newline in constant (compil
+ing source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\graph.cpp) [C:\Users\hmgics\projects\AutoVisionStudi
+o\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\core\include\avs/core/log.hpp(11,73): error C2137: empty character constant (c 
+ompiling source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\graph.cpp) [C:\Users\hmgics\projects\AutoVision 
+Studio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\core\include\avs/core/log.hpp(12,1): error C2001: newline in constant (compili 
+ng source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\graph.cpp) [C:\Users\hmgics\projects\AutoVisionStudio 
+\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\graph.cpp(15,15): error C2039: 'runOnce': is not a member of 'avs::G 
+raph' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/graph.hpp(14): message : see declaration of 'avs::Grap 
+h' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\graph.cpp(15,22): error C4430: missing type specifier - int assumed. 
+ Note: C++ does not support default-int [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]        
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\graph.cpp(15,22): error C2146: syntax error: missing ';' before iden 
+tifier 'runOnce' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\graph.cpp(15,25): error C2143: syntax error: missing ';' before '{'  
+[C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\graph.cpp(15,25): error C2447: '{': missing function header (old-sty
+le formal list?) [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/node.hpp(32,20): error C3646: 'process': unknown overr 
+ide specifier (compiling source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\registry.cpp) [C:\Users\hmgics\ 
+projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/node.hpp(32,28): error C2059: syntax error: ')' (compi 
+ling source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\registry.cpp) [C:\Users\hmgics\projects\AutoVisionS 
+tudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/node.hpp(32,33): error C2238: unexpected token(s) prec 
+eding ';' (compiling source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\registry.cpp) [C:\Users\hmgics\proj 
+ects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\core\include\avs/core/log.hpp(11,73): error C2001: newline in constant (compil
+ing source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp) [C:\Users\hmgics\projects\AutoVisionSt
+udio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\core\include\avs/core/log.hpp(11,73): error C2137: empty character constant (c 
+ompiling source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp) [C:\Users\hmgics\projects\AutoVis 
+ionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\core\include\avs/core/log.hpp(12,1): error C2001: newline in constant (compili 
+ng source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp) [C:\Users\hmgics\projects\AutoVisionStu 
+dio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/node.hpp(32,20): error C3646: 'process': unknown overr 
+ide specifier (compiling source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp) [C:\Users\hmgics\ 
+projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/node.hpp(32,28): error C2059: syntax error: ')' (compi
+ling source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp) [C:\Users\hmgics\projects\AutoVisionS 
+tudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/node.hpp(32,33): error C2238: unexpected token(s) prec 
+eding ';' (compiling source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp) [C:\Users\hmgics\proj 
+ects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/graph.hpp(24,12): error C3646: 'runOnce': unknown over 
+ride specifier (compiling source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp) [C:\Users\hmgics 
+\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/graph.hpp(24,19): error C2059: syntax error: '(' (comp 
+iling source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp) [C:\Users\hmgics\projects\AutoVision 
+Studio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/graph.hpp(24,21): error C2238: unexpected token(s) pre 
+ceding ';' (compiling source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp) [C:\Users\hmgics\pro 
+jects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/executor.hpp(22,25): error C2065: 'NodeId': undeclared
+ identifier (compiling source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp) [C:\Users\hmgics\pr 
+ojects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/executor.hpp(22,20): error C2923: 'std::pair': 'NodeId 
+' is not a valid template type argument for parameter '_Ty1' (compiling source file C:\Users\hmgics\projects\AutoVisionStudi 
+o\src\graph\src\executor.cpp) [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/executor.hpp(22): message : see declaration of 'NodeId 
+' (compiling source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp) [C:\Users\hmgics\projects\Aut 
+oVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/executor.hpp(22,20): error C3203: 'pair': unspecialize 
+d class template can't be used as a template argument for template parameter '_Ty', expected a real type (compiling source f 
+ile C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp) [C:\Users\hmgics\projects\AutoVisionStudio\build\s 
+rc\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/executor.hpp(32,44): error C2065: 'NodeId': undeclared 
+ identifier (compiling source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp) [C:\Users\hmgics\pr 
+ojects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/executor.hpp(32,37): error C2923: 'std::vector': 'Node 
+Id' is not a valid template type argument for parameter '_Ty' (compiling source file C:\Users\hmgics\projects\AutoVisionStud 
+io\src\graph\src\executor.cpp) [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/executor.hpp(32): message : see declaration of 'NodeId 
+' (compiling source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp) [C:\Users\hmgics\projects\Aut 
+oVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/executor.hpp(32,37): error C2976: 'std::vector': too f 
+ew template arguments (compiling source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp) [C:\Users 
+\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(430): message : see d 
+eclaration of 'std::vector' (compiling source file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp) [C: 
+\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/executor.hpp(32,37): error C3203: 'vector': unspeciali 
+zed class template can't be used as a template argument for template parameter '_Ty', expected a real type (compiling source 
+ file C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp) [C:\Users\hmgics\projects\AutoVisionStudio\build 
+\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(7,57): error C2065: 'NodeId': undeclared identifier [C: 
+\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(7,50): error C2923: 'std::vector': 'NodeId' is not a va 
+lid template type argument for parameter '_Ty' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj] 
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(7): message : see declaration of 'NodeId' [C:\Users\hmg 
+ics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(7,50): error C2976: 'std::vector': too few template arg 
+uments [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(430): message : see d
+eclaration of 'std::vector' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(7,50): error C3203: 'vector': unspecialized class templ 
+ate can't be used as a template argument for template parameter '_Ty', expected a real type [C:\Users\hmgics\projects\AutoVi 
+sionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(8,22): error C2065: 'NodeId': undeclared identifier [C: 
+\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(8,8): error C2923: 'std::unordered_map': 'NodeId' is no 
+t a valid template type argument for parameter '_Kty' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.v 
+cxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(8): message : see declaration of 'NodeId' [C:\Users\hmg 
+ics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(8,8): error C2976: 'std::unordered_map': too few templa 
+te arguments [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\unordered_map(67): message : 
+ see declaration of 'std::unordered_map' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]       
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(8): error C2641: cannot deduce template arguments for ' 
+std::unordered_map' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(8): error C2783: 'std::unordered_map<_Kty,_Ty,_Hasher,_ 
+Keyeq,_Alloc> std::unordered_map(void)': could not deduce template argument for '_Kty' [C:\Users\hmgics\projects\AutoVisionS 
+tudio\build\src\graph\avs_graph.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\unordered_map(105): message  
+: see declaration of 'std::unordered_map' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]      
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(8): error C2783: 'std::unordered_map<_Kty,_Ty,_Hasher,_
+Keyeq,_Alloc> std::unordered_map(void)': could not deduce template argument for '_Ty' [C:\Users\hmgics\projects\AutoVisionSt 
+udio\build\src\graph\avs_graph.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\unordered_map(105): message  
+: see declaration of 'std::unordered_map' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]      
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(8,40): error C2780: 'std::unordered_map<_Kty,_Ty,_Hashe 
+r,_Keyeq,_Alloc> std::unordered_map(std::unordered_map<_Kty,_Ty,_Hasher,_Keyeq,_Alloc>)': expects 1 arguments - 0 provided [ 
+C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\unordered_map(67): message : 
+ see declaration of 'std::unordered_map' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]       
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(9,22): error C2039: 'nodes': is not a member of 'avs::G 
+raph' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/graph.hpp(14): message : see declaration of 'avs::Grap 
+h' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(9,3): error C2530: 'kv': references must be initialized 
+ [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(9,3): error C3531: 'kv': a symbol whose type contains ' 
+auto' must have an initializer [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(9,17): error C2143: syntax error: missing ';' before ': 
+' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(9,29): error C2143: syntax error: missing ';' before ') 
+' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(9,57): error C2039: 'pred': is not a member of 'avs::Gr 
+aph' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/graph.hpp(14): message : see declaration of 'avs::Grap 
+h' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(10,15): error C2065: 'NodeId': undeclared identifier [C
+:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(10,8): error C2923: 'std::vector': 'NodeId' is not a va 
+lid template type argument for parameter '_Ty' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj] 
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(10): message : see declaration of 'NodeId' [C:\Users\hm 
+gics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(10,8): error C2976: 'std::vector': too few template arg 
+uments [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(430): message : see d 
+eclaration of 'std::vector' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(10): error C2641: cannot deduce template arguments for  
+'std::vector' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(10): error C2783: 'std::vector<_Ty,_Alloc> std::vector( 
+void) noexcept(<expr>)': could not deduce template argument for '_Ty' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\g 
+raph\avs_graph.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(462): message : see d 
+eclaration of 'std::vector' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(10,28): error C2780: 'std::vector<_Ty,_Alloc> std::vect 
+or(std::vector<_Ty,_Alloc>)': expects 1 arguments - 0 provided [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\av 
+s_graph.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(430): message : see d 
+eclaration of 'std::vector' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(11,19): error C2672: 'begin': no matching overloaded fu 
+nction found [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(11,26): error C2893: Failed to specialize function temp 
+late 'unknown-type std::begin(_Container &)' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]   
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(1844): message : se 
+e declaration of 'std::begin' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(11,26): message : With the following template arguments 
+: [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(11,26): message : '_Container=std::unordered_map' [C:\U 
+sers\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(11,26): error C2784: 'const _Elem *std::begin(std::init 
+ializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'std::unordered_m 
+ap' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\initializer_list(55): messag 
+e : see declaration of 'std::begin' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(11,19): error C2672: 'end': no matching overloaded func 
+tion found [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(11,26): error C2893: Failed to specialize function temp 
+late 'unknown-type std::end(_Container &)' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]     
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(1854): message : se 
+e declaration of 'std::end' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(11,26): message : With the following template arguments
+: [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(11,26): message : '_Container=std::unordered_map' [C:\U 
+sers\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(11,26): error C2784: 'const _Elem *std::end(std::initia 
+lizer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'std::unordered_map 
+' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\initializer_list(60): messag 
+e : see declaration of 'std::end' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(11,26): error C3536: '<begin>$L0': cannot be used befor 
+e it is initialized [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(11,26): error C3536: '<end>$L0': cannot be used before  
+it is initialized [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(11,24): error C2100: illegal indirection [C:\Users\hmgi 
+cs\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(11,49): error C2663: 'std::vector<_Ty,_Alloc>::push_bac 
+k': 2 overloads have no legal conversion for 'this' pointer [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_g 
+raph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(12,13): error C2039: 'empty': is not a member of 'std:: 
+unordered_map' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\unordered_map(67): message : 
+ see declaration of 'std::unordered_map' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]       
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(15,22): error C2662: 'bool std::vector<_Ty,_Alloc>::emp 
+ty(void) noexcept const': cannot convert 'this' pointer from 'std::vector' to 'const std::vector<_Ty,_Alloc> &' [C:\Users\hm 
+gics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(15,22): message : Reason: cannot convert from 'std::vec 
+tor' to 'const std::vector<_Ty,_Alloc>' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]        
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(15,10): message : Conversion requires a second user-def 
+ined-conversion operator or constructor [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]        
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(1529,44): message : s 
+ee declaration of 'std::vector<_Ty,_Alloc>::empty' (compiling source file C:\Users\hmgics\projects\AutoVisionStudio\src\grap 
+h\src\executor.cpp) [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(17,25): error C2672: 'std::move': no matching overloade 
+d function found [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(17,35): error C2893: Failed to specialize function temp 
+late 'remove_reference<_Ty>::type &&std::move(_Ty &&) noexcept' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\a 
+vs_graph.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\type_traits(1396): message : 
+ see declaration of 'std::move' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(17,35): message : With the following template arguments 
+: [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(17,35): message : '_Ty=std::vector &' [C:\Users\hmgics\ 
+projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(18,17): error C2662: 'void std::vector<_Ty,_Alloc>::cle 
+ar(void) noexcept': cannot convert 'this' pointer from 'std::vector' to 'std::vector<_Ty,_Alloc> &' [C:\Users\hmgics\project
+s\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(18,17): message : Reason: cannot convert from 'std::vec 
+tor' to 'std::vector<_Ty,_Alloc>' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(18,5): message : Conversion requires a second user-defi 
+ned-conversion operator or constructor [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(1436,33): message : s 
+ee declaration of 'std::vector<_Ty,_Alloc>::clear' (compiling source file C:\Users\hmgics\projects\AutoVisionStudio\src\grap
+h\src\executor.cpp) [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(19,9): error C2065: 'NodeId': undeclared identifier [C: 
+\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(19,16): error C2146: syntax error: missing ';' before i 
+dentifier 'u' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(19,18): error C2143: syntax error: missing ';' before ' 
+:' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(19,18): error C2143: syntax error: missing ')' before ' 
+:' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(19,18): error C2059: syntax error: ':' [C:\Users\hmgics 
+\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(19,27): error C2059: syntax error: ')' [C:\Users\hmgics 
+\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(19,28): error C2143: syntax error: missing ';' before ' 
+{' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(20,31): error C2065: 'u': undeclared identifier [C:\Use
+rs\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(22,11): error C2065: 'NodeId': undeclared identifier [C 
+:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(22,18): error C2146: syntax error: missing ';' before i 
+dentifier 'v' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(22,20): error C2143: syntax error: missing ';' before ' 
+:' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(22,20): error C2143: syntax error: missing ')' before ' 
+:' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(22,20): error C2059: syntax error: ':' [C:\Users\hmgics 
+\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(22,32): error C2059: syntax error: ')' [C:\Users\hmgics 
+\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(22,33): error C2143: syntax error: missing ';' before ' 
+{' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(23,20): error C2065: 'v': undeclared identifier [C:\Use 
+rs\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(23,43): error C2065: 'v': undeclared identifier [C:\Use 
+rs\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(33,27): error C2065: 'NodeId': undeclared identifier [C 
+:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(33,20): error C2923: 'std::vector': 'NodeId' is not a v 
+alid template type argument for parameter '_Ty' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj 
+]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(33): message : see declaration of 'NodeId' [C:\Users\hm 
+gics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(33,20): error C2976: 'std::vector': too few template ar 
+guments [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(430): message : see d 
+eclaration of 'std::vector' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(33,20): error C3203: 'vector': unspecialized class temp 
+late can't be used as a template argument for template parameter '_Ty', expected a real type [C:\Users\hmgics\projects\AutoV 
+isionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(34,79): error C2664: 'void std::vector<int,std::allocat 
+or<int>>::push_back(const _Ty &)': cannot convert argument 1 from 'initializer list' to 'const _Ty &' [C:\Users\hmgics\proje 
+cts\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(34,79): message : Reason: cannot convert from 'initiali 
+zer list' to 'const _Ty' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(34,71): message : The initializer contains too many ele 
+ments [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(742,33): message : se 
+e declaration of 'std::vector<int,std::allocator<int>>::push_back' (compiling source file C:\Users\hmgics\projects\AutoVisio 
+nStudio\src\graph\src\executor.cpp) [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(37,3): error C2065: 'NodeContext': undeclared identifie 
+r [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(37,15): error C2146: syntax error: missing ';' before i 
+dentifier 'ctx' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(37,15): error C2065: 'ctx': undeclared identifier [C:\U
+sers\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(43,10): error C2065: 'NodeId': undeclared identifier [C 
+:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(43,17): error C2146: syntax error: missing ';' before i 
+dentifier 'id' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(43,20): error C2143: syntax error: missing ';' before ' 
+:' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(43,20): error C2143: syntax error: missing ')' before ' 
+:' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(43,20): error C2059: syntax error: ':' [C:\Users\hmgics 
+\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(43,27): error C2059: syntax error: ')' [C:\Users\hmgics 
+\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(43,28): error C2143: syntax error: missing ';' before ' 
+{' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(44,25): error C3481: 'id': lambda capture variable not  
+found [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(45,22): error C2039: 'nodes': is not a member of 'avs:: 
+Graph' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/graph.hpp(14): message : see declaration of 'avs::Grap 
+h' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(45,1): error C2039: '__this': is not a member of 'avs:: 
+Graph' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/graph.hpp(14): message : see declaration of 'avs::Grap 
+h' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(46,1): error C3536: 'it': cannot be used before it is i 
+nitialized [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(46,22): error C2039: 'nodes': is not a member of 'avs:: 
+Graph' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/graph.hpp(14): message : see declaration of 'avs::Grap 
+h' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(46,1): error C2039: '__this': is not a member of 'avs:: 
+Graph' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\include\avs/graph/graph.hpp(14): message : see declaration of 'avs::Grap 
+h' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(48,1): error C2664: 'void std::vector<int,std::allocato 
+r<int>>::push_back(const _Ty &)': cannot convert argument 1 from 'initializer list' to 'const _Ty &' [C:\Users\hmgics\projec 
+ts\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(48,1): message : Reason: cannot convert from 'initializ 
+er list' to 'const _Ty' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(48,46): message : The initializer contains too many ele 
+ments [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(742,33): message : se 
+e declaration of 'std::vector<int,std::allocator<int>>::push_back' (compiling source file C:\Users\hmgics\projects\AutoVisio 
+nStudio\src\graph\src\executor.cpp) [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(50,36): error C2065: 'ctx': undeclared identifier [C:\U 
+sers\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\graph\src\executor.cpp(51,1): error C3536: 'r': cannot be used before it is in 
+itialized [C:\Users\hmgics\projects\AutoVisionStudio\build\src\graph\avs_graph.vcxproj]
+  Building Custom Rule C:/Users/hmgics/projects/AutoVisionStudio/src/templates/CMakeLists.txt
+  template_common.cpp
+  bin_picking.cpp
+  depal.cpp
+  inspection.cpp
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(12,18): error C2001: newline in constant [C:
+\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(12,18): error C2015: too many characters in  
+constant [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(13,13): error C2143: syntax error: missing ' 
+:' before 'case' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(14,18): error C2001: newline in constant [C: 
+\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(14,18): error C2137: empty character constan 
+t [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(15,1): error C2001: newline in constant [C:\ 
+Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(15,1): error C2015: too many characters in c 
+onstant [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(15,1): error C2143: syntax error: missing ': 
+' before 'constant' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(16,13): error C2143: syntax error: missing ' 
+;' before 'case' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(14,18): error C2196: case value '0' already  
+used [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(26,11): error C2001: newline in constant [C: 
+\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(27,1): error C2001: newline in constant [C:\ 
+Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(28,5): error C2146: syntax error: missing '; 
+' before identifier 'os' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(28,45): error C2001: newline in constant [C: 
+\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(29,1): error C2001: newline in constant [C:\ 
+Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(30,8): error C3688: invalid literal suffix ' 
+name'; literal operator or literal operator template 'operator ""name' not found [C:\Users\hmgics\projects\AutoVisionStudio\ 
+build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(30,5): error C2146: syntax error: missing '; 
+' before identifier 'os' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(30,20): error C2001: newline in constant [C: 
+\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(31,1): error C2001: newline in constant [C:\ 
+Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(32,5): error C3688: invalid literal suffix ' 
+nodes'; literal operator or literal operator template 'operator ""nodes' not found [C:\Users\hmgics\projects\AutoVisionStudi 
+o\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(32,5): error C2143: syntax error: missing '; 
+' before 'for' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(34,15): error C2001: newline in constant [C: 
+\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(35,1): error C2001: newline in constant [C:\ 
+Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(36,9): error C2146: syntax error: missing '; 
+' before identifier 'os' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(36,51): error C2001: newline in constant [C: 
+\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(37,1): error C2001: newline in constant [C:\ 
+Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(38,12): error C3688: invalid literal suffix  
+'id'; literal operator or literal operator template 'operator ""id' not found [C:\Users\hmgics\projects\AutoVisionStudio\bui
+ld\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(38,9): error C2146: syntax error: missing '; 
+' before identifier 'os' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(38,55): error C2001: newline in constant [C: 
+\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(39,1): error C2001: newline in constant [C:\ 
+Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(40,12): error C3688: invalid literal suffix  
+'type'; literal operator or literal operator template 'operator ""type' not found [C:\Users\hmgics\projects\AutoVisionStudio 
+\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(40,9): error C2146: syntax error: missing '; 
+' before identifier 'os' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(40,34): error C3688: invalid literal suffix  
+'params'; literal operator or literal operator template 'operator ""params' not found [C:\Users\hmgics\projects\AutoVisionSt 
+udio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(46,15): error C2001: newline in constant [C: 
+\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(47,1): error C2001: newline in constant [C:\
+Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(48,9): error C2146: syntax error: missing '; 
+' before identifier 'os' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(48,55): error C2001: newline in constant [C: 
+\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(49,1): error C2001: newline in constant [C:\ 
+Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(50,5): error C2143: syntax error: missing '; 
+' before '}' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(51,11): error C2001: newline in constant [C: 
+\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(52,1): error C2001: newline in constant [C:\ 
+Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(53,5): error C2146: syntax error: missing '; 
+' before identifier 'os' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(53,20): error C2001: newline in constant [C: 
+\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(54,1): error C2001: newline in constant [C:\ 
+Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(55,5): error C3688: invalid literal suffix '
+edges'; literal operator or literal operator template 'operator ""edges' not found [C:\Users\hmgics\projects\AutoVisionStudi 
+o\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(55,5): error C2143: syntax error: missing '; 
+' before 'for' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(57,15): error C2001: newline in constant [C: 
+\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(58,1): error C2001: newline in constant [C:\ 
+Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(59,9): error C2146: syntax error: missing '; 
+' before identifier 'os' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(59,53): error C2001: newline in constant [C: 
+\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(60,1): error C2001: newline in constant [C:\ 
+Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(61,12): error C3688: invalid literal suffix 
+'src'; literal operator or literal operator template 'operator ""src' not found [C:\Users\hmgics\projects\AutoVisionStudio\b 
+uild\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(61,9): error C2146: syntax error: missing '; 
+' before identifier 'os' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(61,63): error C2001: newline in constant [C: 
+\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(62,1): error C2001: newline in constant [C:\ 
+Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(63,12): error C3688: invalid literal suffix  
+'src_port'; literal operator or literal operator template 'operator ""src_port' not found [C:\Users\hmgics\projects\AutoVisi 
+onStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(63,9): error C2146: syntax error: missing '; 
+' before identifier 'os' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(63,53): error C2001: newline in constant [C: 
+\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(64,1): error C2001: newline in constant [C:\ 
+Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(65,12): error C3688: invalid literal suffix  
+'dst'; literal operator or literal operator template 'operator ""dst' not found [C:\Users\hmgics\projects\AutoVisionStudio\b 
+uild\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(65,9): error C2146: syntax error: missing ';
+' before identifier 'os' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(65,63): error C2001: newline in constant [C: 
+\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(66,1): error C2001: newline in constant [C:\ 
+Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(67,12): error C3688: invalid literal suffix  
+'dst_port'; literal operator or literal operator template 'operator ""dst_port' not found [C:\Users\hmgics\projects\AutoVisi 
+onStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(67,9): error C2146: syntax error: missing '; 
+' before identifier 'os' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(67,55): error C2001: newline in constant [C: 
+\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(68,1): error C2001: newline in constant [C:\ 
+Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(69,5): error C2143: syntax error: missing '; 
+' before '}' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(70,11): error C2001: newline in constant [C: 
+\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(71,1): error C2001: newline in constant [C:\ 
+Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(72,5): error C2146: syntax error: missing ';
+' before identifier 'os' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(72,11): error C2001: newline in constant [C: 
+\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(73,1): error C2001: newline in constant [C:\ 
+Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\templates\src\template_common.cpp(74,5): error C2143: syntax error: missing '; 
+' before 'return' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\templates\avs_templates.vcxproj]
+  Building Custom Rule C:/Users/hmgics/projects/AutoVisionStudio/src/gui/CMakeLists.txt
+  GuiFactory.cpp
+  ImGuiGui.cpp
+  ImGuiGraphEditor.cpp
+  metrics_panel.cpp
+C:\Users\hmgics\projects\AutoVisionStudio\src\gui\src\metrics_panel.cpp(2,10): fatal error C1083: Cannot open include file: 
+'avs/core/telemetry.hpp': No such file or directory [C:\Users\hmgics\projects\AutoVisionStudio\build\src\gui\avs_gui.vcxproj
+]
+C:\Users\hmgics\projects\AutoVisionStudio\src\gui\src\gui\imgui\ImGuiGui.cpp(29,61): error C2679: binary '=': no operator fo
+und which takes a right-hand operand of type 'std::unique_ptr<avs::gui::ImGuiGraphEditor,std::default_delete<avs::gui::ImGui 
+GraphEditor>>' (or there is no acceptable conversion) [C:\Users\hmgics\projects\AutoVisionStudio\build\src\gui\avs_gui.vcxpr 
+oj]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(3238,17): message : c 
+ould be 'std::unique_ptr<avs::gui::IGraphEditor,std::default_delete<avs::gui::IGraphEditor>> &std::unique_ptr<avs::gui::IGra
+phEditor,std::default_delete<avs::gui::IGraphEditor>>::operator =(const std::unique_ptr<avs::gui::IGraphEditor,std::default_ 
+delete<avs::gui::IGraphEditor>> &)' (compiling source file C:\Users\hmgics\projects\AutoVisionStudio\src\gui\src\gui\imgui\I 
+mGuiGui.cpp) [C:\Users\hmgics\projects\AutoVisionStudio\build\src\gui\avs_gui.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(3135,17): message : o 
+r       'std::unique_ptr<avs::gui::IGraphEditor,std::default_delete<avs::gui::IGraphEditor>> &std::unique_ptr<avs::gui::IGra 
+phEditor,std::default_delete<avs::gui::IGraphEditor>>::operator =(std::nullptr_t) noexcept' (compiling source file C:\Users\ 
+hmgics\projects\AutoVisionStudio\src\gui\src\gui\imgui\ImGuiGui.cpp) [C:\Users\hmgics\projects\AutoVisionStudio\build\src\gu 
+i\avs_gui.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\gui\src\gui\imgui\ImGuiGui.cpp(29,61): message : while trying to match the arg 
+ument list '(std::unique_ptr<avs::gui::IGraphEditor,std::default_delete<avs::gui::IGraphEditor>>, std::unique_ptr<avs::gui:: 
+ImGuiGraphEditor,std::default_delete<avs::gui::ImGuiGraphEditor>>)' [C:\Users\hmgics\projects\AutoVisionStudio\build\src\gui 
+\avs_gui.vcxproj]
+  Building Custom Rule C:/Users/hmgics/projects/AutoVisionStudio/src/nodes/vision/CMakeLists.txt
+  GrayscaleNode.cpp
+  BlurNode.cpp
+  CannyNode.cpp
+  TemplateMatchNode.cpp
+  RegisterVisionNodes.cpp
+  avs_nodes_vision.vcxproj -> C:\Users\hmgics\projects\AutoVisionStudio\build\src\nodes\vision\Release\avs_nodes_vision.lib
+  Building Custom Rule C:/Users/hmgics/projects/AutoVisionStudio/src/plugins/CMakeLists.txt
+  plugin_loader.cpp
+C:\Users\hmgics\projects\AutoVisionStudio\src\plugins\include\avs/plugin/plugin_loader.hpp(7,10): fatal error C1083: Cannot 
+open include file: 'avs/core/export.hpp': No such file or directory [C:\Users\hmgics\projects\AutoVisionStudio\build\src\plu
+gins\avs_plugin_loader.vcxproj]
+  Building Custom Rule C:/Users/hmgics/projects/AutoVisionStudio/src/runtime/CMakeLists.txt
+  job_system.cpp
+C:\Users\hmgics\projects\AutoVisionStudio\src\runtime\src\job_system.cpp(1,10): fatal error C1083: Cannot open include file:
+ 'avs/runtime/job_system.hpp': No such file or directory [C:\Users\hmgics\projects\AutoVisionStudio\build\src\runtime\avs_ru 
+ntime.vcxproj]
+  Building Custom Rule C:/Users/hmgics/projects/AutoVisionStudio/src/runtime/CMakeLists.txt
+  HeadlessExecutor.cpp
+  ServiceHost.cpp
+  RestServer.cpp
+  GrpcServer.cpp
+C:\Users\hmgics\projects\AutoVisionStudio\src\runtime\src\grpc\GrpcServer.cpp(4): fatal error C1075: '{': no matching token 
+found [C:\Users\hmgics\projects\AutoVisionStudio\build\src\runtime\avs_runtime_headless.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\runtime\src\rest\RestServer.cpp(4): fatal error C1075: '{': no matching token  
+found [C:\Users\hmgics\projects\AutoVisionStudio\build\src\runtime\avs_runtime_headless.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\runtime\src\ServiceHost.cpp(35,84): error C2664: 'SERVICE_STATUS_HANDLE Regist
+erServiceCtrlHandlerA(LPCSTR,LPHANDLER_FUNCTION)': cannot convert argument 1 from 'const wchar_t [13]' to 'LPCSTR' [C:\Users
+\hmgics\projects\AutoVisionStudio\build\src\runtime\avs_runtime_headless.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\runtime\src\ServiceHost.cpp(35,49): message : Types pointed to are unrelated;  
+conversion requires reinterpret_cast, C-style cast or function-style cast [C:\Users\hmgics\projects\AutoVisionStudio\build\s 
+rc\runtime\avs_runtime_headless.vcxproj]
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winsvc.h(1550,1): message : see declaration of 'RegisterServi 
+ceCtrlHandlerA' (compiling source file C:\Users\hmgics\projects\AutoVisionStudio\src\runtime\src\ServiceHost.cpp) [C:\Users\ 
+hmgics\projects\AutoVisionStudio\build\src\runtime\avs_runtime_headless.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\runtime\src\ServiceHost.cpp(88,110): error C2440: 'initializing': cannot conve 
+rt from 'void (__cdecl *)(DWORD,LPTSTR *)' to 'LPSERVICE_MAIN_FUNCTIONW' [C:\Users\hmgics\projects\AutoVisionStudio\build\sr 
+c\runtime\avs_runtime_headless.vcxproj]
+C:\Users\hmgics\projects\AutoVisionStudio\src\runtime\src\ServiceHost.cpp(88,74): message : None of the functions with this  
+name in scope match the target type [C:\Users\hmgics\projects\AutoVisionStudio\build\src\runtime\avs_runtime_headless.vcxpro 
+j]

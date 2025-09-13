@@ -1,0 +1,12 @@
+
+@startuml
+!pragma layout smetana
+!include core.puml
+!include graph.puml
+!include scripting.puml
+!include gui.puml
+!include adapters.puml
+!include nodes.puml
+!include runtime.puml
+!include app.puml
+@enduml

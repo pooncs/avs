@@ -1,0 +1,8 @@
+{
+  "kind": "project",
+  "template": "bin_picking",
+  "params": {
+    "camera": "realsense",
+    "robot": "abb"
+  }
+}

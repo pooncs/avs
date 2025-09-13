@@ -1,0 +1,19 @@
+@startuml
+' AutoVisionStudio UML - PlantUML
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam linetype ortho
+skinparam dpi 150
+
+package "avs::gui" {
+  class App {
+    +init(cfg: WindowConfig) : bool
+    +run() : int
+  }
+  class WindowConfig {+w: int;+h: int;+title: string}
+}
+
+App ..> WindowConfig
+App ..> avs::graph::Graph : visualize/edit (conceptual)
+
+@enduml

@@ -1,0 +1,42 @@
+@startuml
+' AutoVisionStudio UML - PlantUML
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam linetype ortho
+skinparam dpi 150
+
+package "avs::core" as core {
+}
+package "avs::util" as util {
+}
+package "avs::graph" as graph {
+}
+package "avs::runtime" as runtime {
+}
+package "avs::scripting" as scripting {
+}
+package "avs::adapters" as adapters {
+}
+package "avs::nodes" as nodes {
+  package vision {}
+  package pointcloud {}
+  package ml {}
+  package robotics {}
+}
+package "avs::gui" as gui {
+}
+package app {
+}
+
+core --> graph : basic types
+util --> graph : helpers
+scripting --> app : embedded Python
+adapters --> nodes : device wrappers
+nodes --> graph : Node subclasses
+runtime --> graph : scheduling primitives
+gui --> graph : visualize/edit
+app --> gui : start UI
+app --> scripting : init/shutdown
+app --> graph : build/run projects
+
+@enduml

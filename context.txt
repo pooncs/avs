@@ -1,0 +1,23 @@
+
+AutoVisionStudio (AVS) master context
+
+Goal: Build a C++17 Windows (MSVC 2019 + CMake) app similar to Mech-Mind's Mech-Vision/Mech-Viz: node-graph, no-code GUI, robotics & vision adapters, embedded Python. Libraries: OpenCV, Open3D, ABB PC SDK, camera SDKs (Photoneo, Creaform, Intel RealSense). GUI: Qt or Dear ImGui (choose per-thread). Hardware: RTX 4090 CUDA 11.8 available.
+
+Constraints: Keep comments brief. Modular, plugin-based. High perf. Drag-and-drop graph editor. Future >20k LOC. This repo is only scaffolding.
+
+Key modules:
+- core: types, logging
+- util: fs, json placeholder
+- graph: Node/Port/Graph/Executor, Registry with AVS_REGISTER_NODE macro
+- runtime: scheduler placeholder
+- scripting: CPython embedding (WITH_PYTHON)
+- adapters: stubs for OpenCV/Open3D/RealSense/Photoneo/Creaform/ABB
+- nodes: vision/pointcloud/ml/robotics sample nodes
+- gui: placeholder API; implement Qt or ImGui later
+- app: entry point
+
+CMake options: WITH_OPENCV, WITH_OPEN3D, WITH_REALSENSE, WITH_PHOTONEO, WITH_CREAFORM, WITH_ABB, WITH_PYTHON, WITH_QT, WITH_IMGUI
+
+Coding style: Modern C++17, RAII, pImpl for heavy components, no exceptions across module boundaries, Result{ok,msg} pattern.
+
+Thread prompts will each implement a bounded component and integrate via public headers and CMake targets.

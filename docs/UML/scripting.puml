@@ -1,0 +1,17 @@
+@startuml
+' AutoVisionStudio UML - PlantUML
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam linetype ortho
+skinparam dpi 150
+
+package "avs::scripting" {
+  class Python {
+    {static} + init(cfg: PyConfig) : bool
+    {static} + run(code: string) : bool
+    {static} + shutdown() : void
+  }
+  class PyConfig {+program_name: string}
+}
+
+@enduml

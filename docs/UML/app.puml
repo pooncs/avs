@@ -1,0 +1,18 @@
+@startuml
+' AutoVisionStudio UML - PlantUML
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam linetype ortho
+skinparam dpi 150
+
+package app {
+  class avs_main {
+    +main() : int
+  }
+}
+
+avs_main ..> avs::gui::App
+avs_main ..> avs::scripting::Python
+avs_main ..> avs::graph::Graph
+
+@enduml

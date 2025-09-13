@@ -1,0 +1,44 @@
+@startuml
+' AutoVisionStudio UML - PlantUML
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam linetype ortho
+skinparam dpi 150
+
+package "avs::graph" {
+  class Port {+name: string;+is_input: bool}
+  class Connection {+from_node: int;+from_port: int;+to_node: int;+to_port: int}
+  abstract class Node {
+    +type() : const char*
+    +inputs() : vector<Port>
+    +outputs() : vector<Port>
+    +process() : avs::core::Result
+  }
+  class Graph {
+    -nodes_: vector< unique_ptr<Node> >
+    -edges_: vector< Connection >
+    +add_node(n: unique_ptr<Node>) : int
+    +connect(c: Connection) : void
+    +node_count() : size_t
+  }
+  class Executor {
+    +run(g: Graph, opts: ExecuteOptions) : int
+  }
+  class ExecuteOptions {+parallel: bool}
+  class Registry {
+    -f_: unordered_map<string, NodeFactory>
+    +instance() : Registry
+    +reg(t: string, f: NodeFactory) : void
+    +create(t: string) : Node*
+  }
+  class AutoReg {+AutoReg(t: string, f: NodeFactory)}
+}
+
+Graph "1" o-- "*" Node
+Graph "1" o-- "*" Connection
+Executor ..> Graph : run()
+Registry ..> Node : create()
+AutoReg ..> Registry : reg()
+Node ..> avs::core::Result
+
+@enduml

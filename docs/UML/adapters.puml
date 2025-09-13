@@ -1,0 +1,17 @@
+@startuml
+' AutoVisionStudio UML - PlantUML
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam linetype ortho
+skinparam dpi 150
+
+package "avs::adapters" {
+  class OpenCV { {static} + available() : bool }
+  class Open3D { {static} + available() : bool }
+  class RealSense { {static} + available() : bool }
+  class Photoneo { {static} + available() : bool }
+  class Creaform { {static} + available() : bool }
+  class ABB { {static} + available() : bool }
+}
+
+@enduml

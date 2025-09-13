@@ -1,0 +1,12 @@
+@startuml
+' AutoVisionStudio UML - PlantUML
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam linetype ortho
+skinparam dpi 150
+
+package "avs::runtime" {
+  class Scheduler {+workers: int}
+}
+
+@enduml

@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.16)
+option(WITH_BENCHMARKS "Build benchmarks" ON)
+if (WITH_BENCHMARKS)
+  add_executable(avs_bench_job job_bench.cpp)
+  target_link_libraries(avs_bench_job PRIVATE avs_runtime)
+  target_compile_features(avs_bench_job PRIVATE cxx_std_17)
+endif()

@@ -1,0 +1,18 @@
+@startuml
+' AutoVisionStudio UML - PlantUML
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam linetype ortho
+skinparam dpi 150
+
+package "avs::nodes::vision" { class Gray }
+package "avs::nodes::pointcloud" { class PassThrough }
+package "avs::nodes::ml" { class DummyInfer }
+package "avs::nodes::robotics" { class MoveJ }
+
+avs::graph::Node <|-- Gray
+avs::graph::Node <|-- PassThrough
+avs::graph::Node <|-- DummyInfer
+avs::graph::Node <|-- MoveJ
+
+@enduml
